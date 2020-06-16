@@ -1,0 +1,45 @@
+177  docker image build -t apacheserver .
+  178  clear
+  179  cat Dockerfile
+  180  docker images
+  181  docker image tag apacheserver:latest localhost:5000/apacheserver:v1
+  182  docker images
+  183  docker push localhost:5000/apacheserver:v1
+  184  clear
+  185  docker image
+  186  docker images
+  187  vi /etc/hosts
+  188  docker image tag apacheserver:latest example.com:5000/apacheserver:v1
+  189  docker images
+  190  docker push example.com:5000/apacheserver:v2
+  191  docker push example.com:5000/apacheserver:latest
+  192  docker push example.com:5000/apacheserver:v1
+  193  vi /etc/hosts
+  194  docker image tag apacheserver:latest fcr.fmr.com:5000/apacheserver:v1
+  195  docker image tag apacheserver:latest fcr.fmr.com:5000/mynewserver:v2
+  196  docker push fcr.fmr.com:5000/mynewserver:v2
+  197  docker images
+  198  docker rmi example.com:5000/apacheserver:v1 
+  199  docker images
+  200  docker rmi fcr.fmr.com:5000/mynewserver:v2 
+  201  docker rmi fcr.fmr.com:5000/apacheserver:v1 
+  202  docker rmi apacheserver:latest 
+  203  docker images
+  204  docker rmi localhost:5000/apacheserver:v1
+  205  clear
+  206  docker images
+  207  docker pull fcr.fmr.com:5000/apacheserver:v1
+  208  docker images
+  209  docker image tag fcr.fmr.com:5000/apacheserver:v1 manidatzme/apache:v3
+  210  docker push manidatzme/apache:v3
+  211  clear
+  212  ls
+  213  vi Dockerfile
+  214  git add .
+  215  git commit -am "New Port added"
+  216  git config --global user.email "manish@hybridskill.com"
+  217  git config --global user.name "manidatzme"
+  218  git commit -am "New Port added"
+  219  git status
+  220  git push
+  221  history
