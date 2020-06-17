@@ -1,0 +1,72 @@
+-it interactive terminal
+
+-dt detach terminal runs in the bg without interrupting the terminal
+
+-p publish the port.. allocate in host machine. for outside world to access it
+8080 : 80
+hostmachine  port : container port
+it actually runs in 80 so maps 80 to 8080 of hostmachine
+
+to find in which port the image runs, history
+
+-P (capital P) docker gives/maps any avaialble port to the container
+
+docker ds to see the port details
+
+docker container stop containername
+
+primary process could be overriden by new process ..  new process details to be given after image name
+
+every container will ve its own os
+
+create  a folder
+pull images/create files
+build a image
+
+
+cms command can be overriden with new process on fly but entry point process cannot be overriden
+
+Dockerfile
+
+dcoker image build -t webserver:version (path mostly . for same dir)
+
+
+/root/docker/Dockerfile
+
+docker inspect bridge
+
+docker container inspect
+
+
+dcoker container exec -it contanername bash
+
+apt-get update && apt-get install iputills-ping -y
+
+ping containeripadress
+
+dcoker networkd ls
+
+docker network create mynetwork
+
+docker network inspect mynetwork
+
+launch two constainers in this netowrk
+
+docker container run -dt --name c3 --network mynetwork ngnix
+
+docker cintainer run  -dt --name c4 --network mynetwork ngnix
+
+go to container c3
+
+ping c4
+
+network peerimg is required
+
+container in one network cannot intereact with another netowrk
+
+
+
+
+
+docker container exec -it containername bash //his is used to go into a cmd
+we use bash to explore directories , type cmds, shell kind. it doesnt ve a ui so we need bash.
