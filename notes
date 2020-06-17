@@ -26,6 +26,10 @@ build a image
 
 cms command can be overriden with new process on fly but entry point process cannot be overriden
 
+
+
+
+
 Dockerfile
 
 dcoker image build -t webserver:version (path mostly . for same dir)
@@ -70,3 +74,47 @@ container in one network cannot intereact with another netowrk
 
 docker container exec -it containername bash //his is used to go into a cmd
 we use bash to explore directories , type cmds, shell kind. it doesnt ve a ui so we need bash.
+
+docker container exec -it c1 bash
+
+create volume
+docker  volume create myvol
+docker volume ls
+
+docker swarm to create cluster and run mnany services
+
+
+
+networking 
+hostmacine
+maching adress
+
+
+docker container rm -f $(docker..
+
+
+how  to persist data if db runs in a container and container gets deleted 
+
+vvolume, bindmounts
+
+
+
+launch a container
+docker container run -dt --name c1  -p 8080:80 --volume myvol <<which directory of the container to persit>>  
+--volume myvol:/etc ngnix
+
+
+docker container rm -f containername
+
+-f forcefully 
+FROM apache
+ARG MYSQL_PASSWORD="abcd"
+FROM mysql
+FROM php
+RUN apt-get install wordppppressssssssss
+CMD wordpress
+
+
+
+
+
