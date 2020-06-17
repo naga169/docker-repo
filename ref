@@ -43,3 +43,48 @@
   219  git status
   220  git push
   221  history
+  
+  Day 3 
+  docker network ls
+   17  docker network inspect bridge
+   18  docker container run -dt nginx
+   19  docker ps
+   20  docker network inspect bridge
+   21  docker container inspect myregistry
+   22  clearf
+   23  clear
+   24  docker ps
+   25  docker container rm -f wizardly_clarke
+   26  docker ps
+   27  docker container run -dt --name c1 nginx
+   28  docker container run -dt --name c2 nginx
+   29  docker container inspect c1
+   30  docker container inspect c2
+   31  clear
+   32  docker ps
+   33  docker container exec -it c1 bash
+   34  docker network ls
+   35  docker network create mynetwork
+   36  docker network ls
+   37  clear
+   38  docker network inspect mynetwork
+   39  docker container run -dt --name c3 --network mynetwork nginx
+   40  docker container run -dt --name c4 --network mynetwork nginx
+   41  docker network inspect mynetwork
+   42  docker container exec -it c3 bash
+   43  docker network ls
+   44  docker container run -dt --name c5 --network none nginx
+   45  docker ps
+   46  docker inspect c5
+   47  ls
+   48  touch image.jpg
+   49  ls
+   50  docker ps
+   51  docker container exec -it c5 bash
+   52  clear
+   53  history
+root@rps:~# apt-get update && apt-get install iputils-ping -y
+  
+  
+  
+  
